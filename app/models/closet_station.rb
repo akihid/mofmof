@@ -1,3 +1,3 @@
 class ClosetStation < ApplicationRecord
-  belongs_to :Property
+  belongs_to :property , optional: true
 end

@@ -1,0 +1,17 @@
+<h1>閲覧</h1>
+
+  <%= @property.name %>
+  <%= @property.rent %>
+  <%= @property.address %>
+  <%= @property.age %>
+  <%= @property.remark %>
+
+  <% @closet_stations.each do |p|%>
+    <h3>最寄り駅<%= p.close_number %></h3>
+    <%= p.route_name %>
+    <%= p.station_name %>
+    <%= p.walikng_to_closest_station_minutes %>
+  <% end %>
+
+  <%= link_to '編集', edit_property_path(@property.id)%>|
+  <%= link_to '戻る', properties_path(@property.id)%>
