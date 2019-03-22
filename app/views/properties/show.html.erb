@@ -1,17 +1,23 @@
 <h1>閲覧</h1>
 
-  <%= @property.name %>
-  <%= @property.rent %>
-  <%= @property.address %>
-  <%= @property.age %>
-  <%= @property.remark %>
+<div class="form-margin-left60 ">
+  <p>物件名:<%= @property.name %></p>
+  <p>賃料:<%= @property.rent %>円</p>
+  <p>住所:<%= @property.address %></p>
+  <p>築年数:<%= @property.age %>年</p>
+  <p>備考:<%= @property.remark %></p>
+</div>
 
+<div class="form-margin-left30 form-border-top">
   <% @closet_stations.each do |p|%>
     <h3>最寄り駅<%= p.close_number %></h3>
-    <%= p.route_name %>
-    <%= p.station_name %>
-    <%= p.walikng_to_closest_station_minutes %>
+    <div class="form-margin-left30">
+      <p>路線名:<%= p.route_name %></p>
+      <p>駅名:<%= p.station_name %></p>
+      <p>徒歩分数:<%= p.walikng_to_closest_station_minutes %>分</p>
+    </div>
   <% end %>
 
-  <%= link_to '編集', edit_property_path(@property.id)%>|
-  <%= link_to '戻る', properties_path(@property.id)%>
+  <%= link_to '編集', edit_property_path(@property.id)%> | 
+  <%= link_to '戻る', properties_path %>
+</div>
