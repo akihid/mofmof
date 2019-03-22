@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
+ html{
+  font-size: 1rem;
+  height: 100%;
+}
+body{
+  height: 100%;
+  font-size: 1rem;
+}
+ .form-border-top{
+  border-top: 1px solid #9C9C9C;
+ }
+
+ table ,tr{
+  margin-bottom: 15px;
+}
+
+ td , a{
+  color: #3c3c3c;
+ }
+ a:hover{
+  color:#9C9C9C;
+ }
+
+ p{
+   padding-bottom: 10px;
+ }
+ input ,textarea{
+  margin-bottom: 10px;
+}
+
+ .form-margin-left30{
+  margin-left: 30px;
+ }
+ .form-margin-left60{
+  margin-left: 60px;
+ }
